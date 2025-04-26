@@ -1,0 +1,119 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Black Pieces-->
+    <Style TargetType="Image" x:Key="icon_BlackPawn">
+        <Setter Property="Source" Value="/Images/Pieces/Black_Pawn.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_BlackKnight">
+        <Setter Property="Source" Value="/Images/Pieces/Black_Knight.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_BlackBishop">
+        <Setter Property="Source" Value="/Images/Pieces/Black_Bishop.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_BlackRook">
+        <Setter Property="Source" Value="/Images/Pieces/Black_Rook.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_BlackQueen">
+        <Setter Property="Source" Value="/Images/Pieces/Black_Queen.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_BlackKing">
+        <Setter Property="Source" Value="/Images/Pieces/Black_King.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+    
+    <!--White Pieces-->
+    <Style TargetType="Image" x:Key="icon_WhitePawn">
+        <Setter Property="Source" Value="/Images/Pieces/White_Pawn.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_WhiteKnight">
+        <Setter Property="Source" Value="/Images/Pieces/White_Knight.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_WhiteBishop">
+        <Setter Property="Source" Value="/Images/Pieces/White_Bishop.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_WhiteRook">
+        <Setter Property="Source" Value="/Images/Pieces/White_Rook.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_WhiteQueen">
+        <Setter Property="Source" Value="/Images/Pieces/White_Queen.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_WhiteKing">
+        <Setter Property="Source" Value="/Images/Pieces/White_King.png"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Canvas.Left" Value="10"/>
+        <Setter Property="Canvas.Top" Value="10"/>
+    </Style>
+    
+    <!--Other Icons-->
+    <Style TargetType="Image" x:Key="icon_GreenDot">
+        <Setter Property="Source" Value="/images/green_circle.png"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Canvas.Left" Value="30"/>
+        <Setter Property="Canvas.Top" Value="30"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="icon_GreenCapture">
+        <Setter Property="Source" Value="/images/green_capture.png"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="90"/>
+        <Setter Property="Canvas.Left" Value="0"/>
+        <Setter Property="Canvas.Top" Value="0"/>
+    </Style>
+
+</ResourceDictionary>

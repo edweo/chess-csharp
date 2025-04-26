@@ -1,0 +1,203 @@
+﻿<Window x:Class="ChessGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChessGame"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Title="Chess" Height="820" Width="800">
+    
+    <!--Resources / Styles-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/styles/Images.xaml"/>
+                <ResourceDictionary Source="/styles/CanvasStyle.xaml"/>
+                <ResourceDictionary Source="/styles/CoordinateStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <!--Main Container-->
+    <Grid Background="#443115">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Sidebar-->
+        
+        <!--Coordinates-->
+        <!--NUMBERS-->
+        <TextBlock Text="8" Grid.Column="0" Grid.Row="1" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="7" Grid.Column="0" Grid.Row="2" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="6" Grid.Column="0" Grid.Row="3" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="5" Grid.Column="0" Grid.Row="4" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="4" Grid.Column="0" Grid.Row="5" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="3" Grid.Column="0" Grid.Row="6" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="2" Grid.Column="0" Grid.Row="7" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="1" Grid.Column="0" Grid.Row="8" Style="{StaticResource CoordinateStyle}"/>
+
+        <TextBlock Text="8" Grid.Column="9" Grid.Row="1" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="7" Grid.Column="9" Grid.Row="2" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="6" Grid.Column="9" Grid.Row="3" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="5" Grid.Column="9" Grid.Row="4" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="4" Grid.Column="9" Grid.Row="5" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="3" Grid.Column="9" Grid.Row="6" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="2" Grid.Column="9" Grid.Row="7" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="1" Grid.Column="9" Grid.Row="8" Style="{StaticResource CoordinateStyle}"/>
+        
+        <!--LETTERS-->
+        <TextBlock Text="A" Grid.Column="1" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="B" Grid.Column="2" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="C" Grid.Column="3" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="D" Grid.Column="4" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="E" Grid.Column="5" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="F" Grid.Column="6" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="G" Grid.Column="7" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="H" Grid.Column="8" Grid.Row="0" Style="{StaticResource CoordinateStyle}"/>
+
+        <TextBlock Text="A" Grid.Column="1" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="B" Grid.Column="2" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="C" Grid.Column="3" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="D" Grid.Column="4" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="E" Grid.Column="5" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="F" Grid.Column="6" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="G" Grid.Column="7" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+        <TextBlock Text="H" Grid.Column="8" Grid.Row="9" Style="{StaticResource CoordinateStyle}"/>
+
+        <!--Chess Board-->
+        <Grid x:Name="chessBoardGrid" Height="720" Width="720" 
+              Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="8">
+
+            <!--Columns-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Rows-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+             
+            <!--Column H-->
+            <Canvas x:Name="border_H1" Grid.Column="7" Grid.Row="7" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_H2" Grid.Column="7" Grid.Row="6" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_H3" Grid.Column="7" Grid.Row="5" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_H4" Grid.Column="7" Grid.Row="4" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_H5" Grid.Column="7" Grid.Row="3" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_H6" Grid.Column="7" Grid.Row="2" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_H7" Grid.Column="7" Grid.Row="1" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_H8" Grid.Column="7" Grid.Row="0" Style="{StaticResource CanvasBlackSquare}"/>
+
+            <!--Column G-->
+            <Canvas x:Name="border_G1" Grid.Column="6" Grid.Row="7" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_G2" Grid.Column="6" Grid.Row="6" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_G3" Grid.Column="6" Grid.Row="5" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_G4" Grid.Column="6" Grid.Row="4" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_G5" Grid.Column="6" Grid.Row="3" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_G6" Grid.Column="6" Grid.Row="2" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_G7" Grid.Column="6" Grid.Row="1" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_G8" Grid.Column="6" Grid.Row="0" Style="{StaticResource CanvasWhiteSquare}"/>
+
+            <!--Column F-->
+            <Canvas x:Name="border_F1" Grid.Column="5" Grid.Row="7" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_F2" Grid.Column="5" Grid.Row="6" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_F3" Grid.Column="5" Grid.Row="5" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_F4" Grid.Column="5" Grid.Row="4" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_F5" Grid.Column="5" Grid.Row="3" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_F6" Grid.Column="5" Grid.Row="2" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_F7" Grid.Column="5" Grid.Row="1" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_F8" Grid.Column="5" Grid.Row="0" Style="{StaticResource CanvasBlackSquare}"/>
+
+            <!--Column E-->
+            <Canvas x:Name="border_E1" Grid.Column="4" Grid.Row="7" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_E2" Grid.Column="4" Grid.Row="6" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_E3" Grid.Column="4" Grid.Row="5" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_E4" Grid.Column="4" Grid.Row="4" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_E5" Grid.Column="4" Grid.Row="3" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_E6" Grid.Column="4" Grid.Row="2" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_E7" Grid.Column="4" Grid.Row="1" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_E8" Grid.Column="4" Grid.Row="0" Style="{StaticResource CanvasWhiteSquare}"/>
+
+            <!--Column D-->
+            <Canvas x:Name="border_D1" Grid.Column="3" Grid.Row="7" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_D2" Grid.Column="3" Grid.Row="6" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_D3" Grid.Column="3" Grid.Row="5" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_D4" Grid.Column="3" Grid.Row="4" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_D5" Grid.Column="3" Grid.Row="3" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_D6" Grid.Column="3" Grid.Row="2" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_D7" Grid.Column="3" Grid.Row="1" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_D8" Grid.Column="3" Grid.Row="0" Style="{StaticResource CanvasBlackSquare}"/>
+
+            <!--Column C-->
+            <Canvas x:Name="border_C1" Grid.Column="2" Grid.Row="7" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_C2" Grid.Column="2" Grid.Row="6" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_C3" Grid.Column="2" Grid.Row="5" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_C4" Grid.Column="2" Grid.Row="4" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_C5" Grid.Column="2" Grid.Row="3" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_C6" Grid.Column="2" Grid.Row="2" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_C7" Grid.Column="2" Grid.Row="1" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_C8" Grid.Column="2" Grid.Row="0" Style="{StaticResource CanvasWhiteSquare}"/>
+
+            <!--Column B-->
+            <Canvas x:Name="border_B1" Grid.Column="1" Grid.Row="7" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_B2" Grid.Column="1" Grid.Row="6" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_B3" Grid.Column="1" Grid.Row="5" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_B4" Grid.Column="1" Grid.Row="4" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_B5" Grid.Column="1" Grid.Row="3" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_B6" Grid.Column="1" Grid.Row="2" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_B7" Grid.Column="1" Grid.Row="1" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_B8" Grid.Column="1" Grid.Row="0" Style="{StaticResource CanvasBlackSquare}"/>
+
+            <!--Column A-->
+            <Canvas x:Name="border_A1" Grid.Column="0" Grid.Row="7" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_A2" Grid.Column="0" Grid.Row="6" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_A3" Grid.Column="0" Grid.Row="5" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_A4" Grid.Column="0" Grid.Row="4" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_A5" Grid.Column="0" Grid.Row="3" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_A6" Grid.Column="0" Grid.Row="2" Style="{StaticResource CanvasWhiteSquare}"/>
+            <Canvas x:Name="border_A7" Grid.Column="0" Grid.Row="1" Style="{StaticResource CanvasBlackSquare}"/>
+            <Canvas x:Name="border_A8" Grid.Column="0" Grid.Row="0" Style="{StaticResource CanvasWhiteSquare}"/>
+
+        </Grid>
+        
+    </Grid>
+</Window>
