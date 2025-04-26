@@ -1,6 +1,7 @@
 # Chess C#
 
 Simple project I did in 2022 with the goal to learn and familiarize myself with C# and WPF.
+
 *The project is incomplete and contains un-finished features or bugs.*
 
 <div>
